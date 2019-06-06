@@ -1,2 +1,3 @@
 #!/bin/sh
+# or simply run  watchdog -T 60 -t 30 /dev/watchdog ...
 while [ 1 ] ; do sleep 20; echo "1" > /dev/watchdog; done
