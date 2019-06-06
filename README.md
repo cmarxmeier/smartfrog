@@ -1,7 +1,7 @@
 # Model: ZH-IXU1D-MAC
 # Manufacturer: zmodo
 #
-# SOC: Hie3518c
+# SOC: Hi3518c
 # Processor       : ARM926EJ-S rev 5 (v5l)
 # BogoMIPS        : 218.72
 # Features        : swp half thumb fastmult edsp java
