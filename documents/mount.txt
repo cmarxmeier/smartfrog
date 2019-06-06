@@ -1,0 +1,12 @@
+# mount
+rootfs on / type rootfs (rw)
+/dev/root on / type cramfs (ro,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=29924k,nr_inodes=7481,mode=755)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600,ptmxmode=000)
+tmpfs on /tmp type tmpfs (rw,relatime)
+/dev/mtdblock2 on /flashapp type jffs2 (rw,relatime)
+/dev/mtdblock3 on /config type jffs2 (rw,relatime)
+tmfs on /app type tmpfs (rw,relatime)
+tmfs on /system type tmpfs (rw,relatime)
