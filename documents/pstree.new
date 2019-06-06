@@ -1,0 +1,8 @@
+# pstree
+init-+-dropbear---dropbear---sh---pstree
+     |-keep_watchdog.s---sleep
+     |-sh
+     |-syslogd
+     |-udevd
+     |-udhcpc
+     `-wpa_supplicant
