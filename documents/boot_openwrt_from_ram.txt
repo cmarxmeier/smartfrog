@@ -4,7 +4,7 @@
 setenv 'bootargs totalmem=64M mem=40M sensor=ar0130 console=ttyAMA0,115200'
 # Download initramfs via zmodem to RAM
 loady 0x82000000 
-> zmodem file upload "openwrt-hisilicon-armv5tej-3.0.8-initramfs-uImage" over terminal 
+> ymodem file upload "openwrt-hisilicon-armv5tej-3.0.8-initramfs-uImage" over terminal 
 # Start from RAM
 bootm 0x82000000
 > no rt8188eu wlan in image yet :(
