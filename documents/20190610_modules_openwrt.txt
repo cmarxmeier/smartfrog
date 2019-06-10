@@ -1,0 +1,30 @@
+root@OpenIPC_HI35xx:/# lsmod
+cdc_acm                11716  0
+cdc_ether               2793  0
+ch341                   6654  0
+cifs                  221729  0
+des_generic            18766  0
+dm9601                  5199  0
+ecb                     1417  0
+hmac                    2232  0
+md4                     2850  0
+md5                     1340  0
+nls_iso8859_1           2910  0
+option                 14218  0
+ppp_async               6273  0
+ppp_generic            14433  1 ppp_async
+sha256_generic          8352  0
+slhc                    4523  1 ppp_generic
+tun                    12519  0
+usb_storage            34018  0
+usb_wwan                6482  1 option
+usbnet                 11953  2 dm9601
+usbserial              23864  3 option
+root@OpenIPC_HI35xx:/# cd /lib/modules/3.0.8/
+root@OpenIPC_HI35xx:/lib/modules/3.0.8# ls
+cdc-acm.ko         ecb.ko             ppp_async.ko       usb_wwan.ko
+cdc_ether.ko       hmac.ko            ppp_generic.ko     usbnet.ko
+ch341.ko           md4.ko             sha256_generic.ko  usbserial.ko
+cifs.ko            md5.ko             slhc.ko
+des_generic.ko     nls_iso8859-1.ko   tun.ko
+dm9601.ko          option.ko          usb-storage.ko
