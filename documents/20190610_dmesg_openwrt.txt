@@ -1,0 +1,130 @@
+root@OpenIPC_HI35xx:/# dmesg
+[    0.000000] Linux version 3.0.8 (root@alladin-1000H) (gcc version 4.8.3 (Ope9
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] Machine: hi3518
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] AXI bus clock 200000000.
+[    0.000000] On node 0 totalpages: 10240
+[    0.000000] free_area_init_node: node 0, pgdat c07e5490, node_mem_map c07f800
+[    0.000000]   Normal zone: 80 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 10160 pages, LIFO batch:1
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pa0
+[    0.000000] Kernel command line: totalmem=64M mem=40M sensor=ar0130 console=0
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 40MB = 40MB total
+[    0.000000] Memory: 32392k/32392k available, 8568k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.000000]     vmalloc : 0xc3000000 - 0xfe000000   ( 944 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc2800000   (  40 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .init : 0xc0008000 - 0xc0452000   (4392 kB)
+[    0.000000]       .text : 0xc0452000 - 0xc07cb000   (3556 kB)
+[    0.000000]       .data : 0xc07cc000 - 0xc07e5b20   ( 103 kB)
+[    0.000000]        .bss : 0xc07e5b44 - 0xc07f7a20   (  72 kB)
+[    0.000000] SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, 1
+[    0.000000] NR_IRQS:128 nr_irqs:128 128
+[    0.000000] sched_clock: 32 bits at 100MHz, resolution 10ns, wraps every 429s
+[    0.000067] Calibrating delay loop... 218.72 BogoMIPS (lpj=1093632)
+[    0.070081] pid_max: default: 32768 minimum: 301
+[    0.070500] Mount-cache hash table entries: 512
+[    0.071722] CPU: Testing write buffer coherency: ok
+[    0.076450] NET: Registered protocol family 16
+[    0.091456] Serial: AMBA PL011 UART driver
+[    0.091802] uart:0: ttyAMA0 at MMIO 0x20080000 (irq = 5) is a PL011 rev2
+[    0.292164] console [ttyAMA0] enabled
+[    0.296837] uart:1: ttyAMA1 at MMIO 0x20090000 (irq = 5) is a PL011 rev2
+[    0.352032] bio: create slab <bio-0> at 0
+[    0.373581] SCSI subsystem initialized
+[    0.380978] usbcore: registered new interface driver usbfs
+[    0.387248] usbcore: registered new interface driver hub
+[    0.393637] usbcore: registered new device driver usb
+[    0.406673] cfg80211: Calling CRDA to update world regulatory domain
+[    0.413807] Switching to clocksource timer1
+[    0.427373] NET: Registered protocol family 2
+[    0.432115] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.439798] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.447324] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.453917] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.460312] TCP reno registered
+[    0.463486] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.469431] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.476494] NET: Registered protocol family 1
+[    0.481783] RPC: Registered named UNIX socket transport module.
+[    0.487729] RPC: Registered udp transport module.
+[    0.492523] RPC: Registered tcp transport module.
+[    0.497239] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.783112] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.794414] JFFS2 version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.804010] fuse init (API version 7.16)
+[    0.811191] msgmni has been set to 63
+[    0.816311] io scheduler noop registered
+[    0.820348] io scheduler deadline registered (default)
+[    0.825855] io scheduler cfq registered
+[    0.863895] brd: module loaded
+[    0.872054] Spi id table Version 1.22
+[    0.875740] Hisilicon Spi Flash Controller V350 Device Driver, Version 1.10
+[    0.877410] Spi(cs1) ID: 0x01 0x20 0x18 0x4D 0x01 0x80
+[    1.099150] SPI FLASH start_up_mode is 3 Bytes
+[    1.103653] Spi(cs1):
+[    1.105853] Block:64KB
+[    1.108302] Chip:16MB
+[    1.110696] Name:"S25FL129P1"
+[    1.113858] spi size: 16MB
+[    1.116565] chip num: 1
+[    1.119023] Creating 0 MTD partitions on "hi_sfc":
+[    1.128722] Fixed MDIO Bus: probed
+[    1.552708] himii: probed
+[    1.680394] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.687349] hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+[    1.693196] hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus nu1
+[    1.701258] hiusb-ehci hiusb-ehci.0: irq 15, io mem 0x100b0000
+[    1.720126] hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+[    1.728545] hub 1-0:1.0: USB hub found
+[    1.732464] hub 1-0:1.0: 1 port detected
+[    1.739522] platform rtc-hi3518: rtc core: registered rtc-hi3518 as rtc0
+[    1.754097] TCP cubic registered
+[    1.762783] NET: Registered protocol family 10
+[    1.770916] IPv6 over IPv4 tunneling driver
+[    1.777194] NET: Registered protocol family 17
+[    1.782128] 802.1Q VLAN Support v1.8
+[    1.788275] registered taskstats version 1
+[    1.792749] platform rtc-hi3518: setting system clock to 1970-01-01 00:00:00)
+[    1.803032] Freeing init memory: 4392K
+[    1.863900] init: Console is alive
+[    1.903095] Initializing USB Mass Storage driver...
+[    1.908925] usbcore: registered new interface driver usb-storage
+[    1.915033] USB Mass Storage support registered.
+[    2.050142] usb 1-1: new high speed USB device number 2 using hiusb-ehci
+[    2.880685] init: - preinit -
+[    3.840096] mmc0: error -110 whilst initialising SD card
+[    6.474582] procd: - early -
+[    7.331830] procd: - ubus -
+[    8.361353] procd: - init -
+[   11.176751] tun: Universal TUN/TAP device driver, 1.6
+[   11.181925] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   11.197449] usbcore: registered new interface driver cdc_acm
+[   11.203242] cdc_acm: USB Abstract Control Model driver for USB modems and ISs
+[   11.227535] usbcore: registered new interface driver usbserial
+[   11.234703] USB Serial support registered for generic
+[   11.241178] usbcore: registered new interface driver usbserial_generic
+[   11.247734] usbserial: USB Serial Driver core
+[   11.256466] usbcore: registered new interface driver cdc_ether
+[   11.267007] USB Serial support registered for ch341-uart
+[   11.273676] usbcore: registered new interface driver ch341
+[   11.283891] usbcore: registered new interface driver dm9601
+[   11.294473] PPP generic driver version 2.4.2
+[   11.313244] USB Serial support registered for GSM modem (1-port)
+[   11.320942] usbcore: registered new interface driver option
+[   11.326540] option: v0.7.2:USB Driver for GSM modems
+[   17.482357] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   18.671542] PHY: himii:01 - Link is Up - 10/Half
+[   18.676367] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
