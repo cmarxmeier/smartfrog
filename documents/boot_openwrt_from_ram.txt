@@ -3,7 +3,7 @@
 # Kernel settings
 setenv 'bootargs totalmem=64M mem=40M sensor=ar0130 console=ttyAMA0,115200'
 # Download initramfs via zmodem to RAM
-loadby 0x82000000 
+loady 0x82000000 
 > zmodem file upload "uImage-OpenWrt-HI3518Xv1-XM-20181223.bin" over terminal 
 # Start from RAM
 bootm 0x82000000
