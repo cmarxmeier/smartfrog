@@ -20,4 +20,4 @@
 # SDK: Hi3518_SDK_V1.0.7.0
 #
 # toolchain: arm-hisiv100nptl-linux
-
+# sensor: ov9712
