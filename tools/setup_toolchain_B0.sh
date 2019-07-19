@@ -25,4 +25,4 @@ echo "export PATH=/opt/hisi-linux-nptl/arm-hisiv100-linux/target/bin:\$PATH" >> 
 source ~/.bashrc
 
 # Test the toolchain
-cd ../../../mpp/sample/ && make
+cd ../../../mpp/sample/ && make SNS=ov9712
