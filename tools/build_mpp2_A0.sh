@@ -15,6 +15,6 @@ echo "export PATH=/opt/hisi-linux-nptl/arm-hisiv100-linux/target/bin:\$PATH" >> 
 source ~/.bashrc
 
 # Test the toolchain
-cd Hi3518_SDK_V1.0.A.0/mpp2/sample/ && make -j1 V=s
-cd ../tools && make -j1 V=s
+cd Hi3518_SDK_V1.0.A.0/mpp2/sample/ && make SNS=ov9712 -j1 V=s
+cd ../tools && make SNS=ov9712 -j1 V=s
 
