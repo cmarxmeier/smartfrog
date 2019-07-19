@@ -1,0 +1,116 @@
+[ISP] Version: [Hi3518_ISP_V1.0.A.  Release], Build Time[, ]
+
+
+[H264E] Version: [Hi3518_MPP_V1.0.A.0 ], Build Time[Apr  1 2015, 19:36:32]
+
+-----MODULE PARAM--------------------------------------------------------------
+    ContiBuffer  H264eVBSource    H264eRcnEqualRef
+              0              1                   0
+-----CHN ATTR------------------------------------------------------------------
+     ID  MaxWidth MaxHeight  PicWidth PicHeight   profile   MainStr   RefMode   BufSize   ByFrame   MaxStrCnt  PoolId
+
+-----PICTURE INFO--------------------------------------------------------------
+  ID     EncdStart   EncdSucceed    Lost    Disc    Skip  BufLeak   PSkip  Recode      RlsStr  UnrdStr   GetVBFail
+
+-----STREAM BUFFER-------------------------------------------------------------
+     ID     Base        RdTail      RdHead      WrTail      WrHead      DataLen     BufFree
+
+-----RefParam INFO--------------------------------------------------------------
+     ID    EnPred      Base   Enhance     EnIDR
+
+-----ROI INFO------------------------------------------------------------------
+     ID     index    bAbsQp    Qp     width    height    startx    starty
+
+-----Syntax INFO---------------------------------------------------------------
+     ID   slcsplt   slcmode   slcsize
+
+-----Inter & Intra prediction INFO---------------------------------------------
+     ID   profile  HWsize  VWsize  P16x16   P16x8   P8x16    P8x8   MvExt  I16x16    Inxn    Ipcm
+
+-----Syntax INFO--------------------------------------------------------------
+     ID   profile   EntrpyI   EntrpyP  Itrans  ptrans QMatrix   POC   DblkIdc   alpha    beta
+
+-----LOG BUFFER STATE----------------------------------------------------------
+MaxLen  ReadPos WritePos ButtPos
+ 64(KB)       0       97   65536
+
+-----CURRENT LOG LEVEL---------------------------------------------------------
+cmpi    :  3
+vb      :  3
+sys     :  3
+chnl    :  3
+vdec    :  3
+grp     :  3
+venc    :  3
+vpss    :  3
+vda     :  3
+h264e   :  3
+jpege   :  3
+mpeg4e  :  3
+h264d   :  3
+jpegd   :  3
+vo      :  3
+vi      :  3
+dsu     :  3
+rgn     :  3
+rc      :  3
+sio     :  3
+ai      :  3
+ao      :  3
+aenc    :  3
+adec    :  3
+pciv    :  3
+pcivfmw :  3
+ive     :  3
+vcmp    :  3
+fb      :  3
+hdmi    :  3
+voie    :  3
+SIO0 MCLK       :18daea
+
+[VB] Version: [Hi3518_MPP_V1.0.A.0 ], Build Time[Apr  1 2015, 19:36:32]
+
+-----VB PUB CONFIG-------------------------------------------------------------
+Max Count of Pools:        256
+
+-----COMMON POOL CONFIG--------------------------------------------------------
+PoolId       0       1       2       3       4       5       6       7       8       9      10      11      12      13      14      15
+Size         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Count        0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+hi3518_adec 16816 0 - Live 0xbf450000 (P)
+hi3518_aenc 53552 0 - Live 0xbf43e000 (P)
+hi3518_ao 40815 0 - Live 0xbf430000 (P)
+hi3518_ai 46710 0 - Live 0xbf41f000 (P)
+hi3518_sio 12541 2 hi3518_ao,hi3518_ai, Live 0xbf417000 (P)
+hidmac 13593 2 hi3518_ao,hi3518_ai, Live 0xbf40f000
+acodec 10375 0 - Live 0xbf409000 (P)
+ssp_ad9020 4993 0 - Live 0xbf404000
+wdt 4069 4294966552 - Live 0xbf400000
+pwm 1489 0 - Live 0xbf3fc000
+hi_i2c 3792 0 - Live 0xbf3f8000
+ap1511 3209 0 - Live 0xbf3f4000
+gpio 2544 0 - Live 0xbf3f0000
+hi3518_ive 32474 0 - Live 0xbf3e4000 (P)
+hi3518_vda 172473 0 - Live 0xbf3b3000 (P)
+hi3518_region 51571 0 - Live 0xbf3a1000 (P)
+hi3518_rc 152960 0 - Live 0xbf374000 (P)
+hi3518_jpege 46500 0 - Live 0xbf363000 (P)
+hi3518_h264e 162292 0 - Live 0xbf334000 (P)
+hi3518_chnl 39989 0 - Live 0xbf325000 (P)
+hi3518_group 179421 0 - Live 0xbf2f4000 (P)
+hi3518_venc 91620 2 hi3518_jpege,hi3518_h264e, Live 0xbf2d8000 (P)
+hifb 63974 0 - Live 0xbf2c2000 (P)
+hi3518_vou 259130 1 hifb, Live 0xbf272000 (P)
+hi3518_vpss 209030 0 - Live 0xbf236000 (P)
+hi3518_isp 21668 2 ssp_ad9020,hi_i2c, Live 0xbf22c000 (P)
+hi3518_viu 180819 0 - Live 0xbf1f3000 (P)
+hi3518_dsu 129358 0 - Live 0xbf1ce000 (P)
+hi3518_tde 117632 2 hifb,hi3518_dsu, Live 0xbf1a8000 (P)
+hiuser 890 2 hi3518_jpege,hi3518_h264e, Live 0xbf1a4000
+hi3518_sys 40940 1 hi3518_viu, Live 0xbf194000 (P)
+hi3518_base 44474 22 hi3518_adec,hi3518_aenc,hi3518_ao,hi3518_ai,hi3518_sio,acodec,hi3518_ive,hi3518_vda,hi3518_region,hi3518_rc,hi3518_jpege,hi3518_h264
+e,hi3518_chnl,hi3518_group,hi3518_venc,hifb,hi3518_vou,hi3518_vpss,hi3518_isp,hi3518_viu,hi3518_dsu,hi3518_sys, Live 0xbf183000 (P)
+mmz 19773 5 hi3518_aenc,hi3518_h264e,hifb,hi3518_tde,hi3518_base, Live 0xbf17a000
+8188eu 942481 0 - Live 0xbf068000
+mac80211 170116 0 - Live 0xbf031000
+cfg80211 148719 1 mac80211, Live 0xbf000000
