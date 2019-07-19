@@ -16,12 +16,12 @@ source ~/.bashrc
 
 # Test the toolchain
 cd Hi3518_SDK_V1.0.9.0/drv
-cd cipher &&  make -j1 V=s
-cd ../hidmac && make -j1 V=s
-cd ../hisi-irda &&  make -j1 V=s
-cd ../hiuser &&  make -j1 V=s
-cd ../mmz &&  make -j1 V=s
-cd ../rtc &&  make -j1 V=s
-cd ../wtdg  make -j1 V=s
+cd cipher &&  make SNS=ov9712 -j1 V=s
+cd ../hidmac && make SNS=ov9712 -j1 V=s
+cd ../hisi-irda &&  make SNS=ov9712 -j1 V=s
+cd ../hiuser &&  make SNS=ov9712 -j1 V=s
+cd ../mmz &&  make SNS=ov9712 -j1 V=s
+cd ../rtc &&  make SNS=ov9712 -j1 V=s
+cd ../wtdg  make SNS=ov9712 -j1 V=s
 
 
