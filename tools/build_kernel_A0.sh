@@ -21,5 +21,5 @@ echo "to switch from default /bin/sh from dash to bash -> dpkg-reconfigure dash"
 
 cd Hi3518_SDK_V1.0.A.0/osdrv
 #SHELL := /bin/bash
-make OSDRV_CROSS=arm-hisiv100nptl-linux CHIP=hi3518c all
+make OSDRV_CROSS=arm-hisiv100nptl-linux CHIP=hi3518c SNS=ov9712 all
 
