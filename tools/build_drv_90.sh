@@ -22,6 +22,6 @@ cd ../hisi-irda &&  make SNS=ov9712 -j1 V=s
 cd ../hiuser &&  make SNS=ov9712 -j1 V=s
 cd ../mmz &&  make SNS=ov9712 -j1 V=s
 cd ../rtc &&  make SNS=ov9712 -j1 V=s
-cd ../wtdg  make SNS=ov9712 -j1 V=s
+cd ../wtdg && make SNS=ov9712 -j1 V=s
 
 
