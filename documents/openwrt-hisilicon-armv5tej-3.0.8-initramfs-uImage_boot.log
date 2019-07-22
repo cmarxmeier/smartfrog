@@ -1,0 +1,287 @@
+bootm 0x82000000
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   OpenIPC.org - Hisilicon Linux-3.
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    4228632 Bytes = 4 MiB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Linux version 3.0.8 (root@alladin-1000H) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 v15.05.1.101-25-gbb0ab9d537) ) #2 Mon Jul 22 14:45:20 CEST 2019
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] Machine: hi3518
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] AXI bus clock 200000000.
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 10160
+[    0.000000] Kernel command line: totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 40MB = 40MB total
+[    0.000000] Memory: 27816k/27816k available, 13144k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.000000]     vmalloc : 0xc3000000 - 0xfe000000   ( 944 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc2800000   (  40 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .init : 0xc0008000 - 0xc0838000   (8384 kB)
+[    0.000000]       .text : 0xc0838000 - 0xc0c35000   (4084 kB)
+[    0.000000]       .data : 0xc0c36000 - 0xc0c56d00   ( 132 kB)
+[    0.000000]        .bss : 0xc0c56d24 - 0xc0c6fe50   ( 101 kB)
+[    0.000000] SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:128 nr_irqs:128 128
+[    0.000000] sched_clock: 32 bits at 100MHz, resolution 10ns, wraps every 42949ms
+[    0.000065] Calibrating delay loop... 218.72 BogoMIPS (lpj=1093632)
+[    0.070077] pid_max: default: 32768 minimum: 301
+[    0.070499] Mount-cache hash table entries: 512
+[    0.071710] CPU: Testing write buffer coherency: ok
+[    0.076612] NET: Registered protocol family 16
+[    0.091714] Serial: AMBA PL011 UART driver
+[    0.092050] uart:0: ttyAMA0 at MMIO 0x20080000 (irq = 5) is a PL011 rev2
+[    0.292500] console [ttyAMA0] enabled
+[    0.297219] uart:1: ttyAMA1 at MMIO 0x20090000 (irq = 5) is a PL011 rev2
+[    0.364313] bio: create slab <bio-0> at 0
+[    0.386219] SCSI subsystem initialized
+[    0.393684] usbcore: registered new interface driver usbfs
+[    0.400823] usbcore: registered new interface driver hub
+[    0.407055] usbcore: registered new device driver usb
+[    0.420616] cfg80211: Calling CRDA to update world regulatory domain
+[    0.429012] Switching to clocksource timer1
+[    0.442852] NET: Registered protocol family 2
+[    0.447502] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.455313] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.462830] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.469381] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.475780] TCP reno registered
+[    0.478954] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.484941] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.492081] NET: Registered protocol family 1
+[    0.876782] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.884891] JFFS2 version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+[    0.894373] fuse init (API version 7.16)
+[    0.901556] msgmni has been set to 54
+[    0.909323] io scheduler noop registered
+[    0.913360] io scheduler deadline registered (default)
+[    0.918840] io scheduler cfq registered
+[    0.957272] brd: module loaded
+[    0.966896] Spi id table Version 1.22
+[    0.972554] Spi(cs1) ID: 0x01 0x20 0x18 0x4D 0x01 0x80
+[    1.189268] SPI FLASH start_up_mode is 3 Bytes
+[    1.193787] Spi(cs1): 
+[    1.195984] Block:64KB 
+[    1.198434] Chip:16MB 
+[    1.200823] Name:"S25FL129P1"
+[    1.203983] spi size: 16MB
+[    1.206688] chip num: 1
+[    1.209142] Creating 0 MTD partitions on "hi_sfc":
+[    1.218964] Fixed MDIO Bus: probed
+[    1.643423] himii: probed
+[    1.770794] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.777748] hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+[    1.783750] hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+[    1.791796] hiusb-ehci hiusb-ehci.0: irq 15, io mem 0x100b0000
+[    1.810127] hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+[    1.818555] hub 1-0:1.0: USB hub found
+[    1.822470] hub 1-0:1.0: 1 port detected
+[    1.828440] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.835780] hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+[    1.841521] hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 2
+[    1.849208] hiusb-ohci hiusb-ohci.0: irq 16, io mem 0x100a0000
+[    1.916482] hub 2-0:1.0: USB hub found
+[    1.920451] hub 2-0:1.0: 1 port detected
+[    1.927231] usbcore: registered new interface driver cdc_acm
+[    1.932993] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.941929] usbcore: registered new interface driver cdc_wdm
+[    1.947613] Initializing USB Mass Storage driver...
+[    1.953600] usbcore: registered new interface driver usb-storage
+[    1.959627] USB Mass Storage support registered.
+[    1.965140] usbcore: registered new interface driver ums-alauda
+[    1.971976] usbcore: registered new interface driver ums-datafab
+[    1.978744] usbcore: registered new interface driver ums-freecom
+[    1.985684] usbcore: registered new interface driver ums-isd200
+[    1.992517] usbcore: registered new interface driver ums-jumpshot
+[    1.999379] usbcore: registered new interface driver ums-sddr09
+[    2.006233] usbcore: registered new interface driver ums-sddr55
+[    2.013078] usbcore: registered new interface driver mdc800
+[    2.018669] mdc800: v0.7.5 (30/10/2000):USB Driver for Mustek MDC800 Digital Camera
+[    2.031049] using rtc device, rtc-hi3518, for alarms
+[    2.035930] platform rtc-hi3518: rtc core: registered rtc-hi3518 as rtc0
+[    2.050597] Netfilter messages via NETLINK v0.30.
+[    2.055465] nf_conntrack version 0.5.0 (434 buckets, 1736 max)
+[    2.063141] ctnetlink v0.93: registering with nfnetlink.
+[    2.069334] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.075280] TCP cubic registered
+[    2.078528] Initializing XFRM netlink socket
+[    2.101092] NET: Registered protocol family 10
+[    2.109789] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.115738] IPv6 over IPv4 tunneling driver
+[    2.122652] NET: Registered protocol family 17
+[    2.127521] Bridge firewalling registered
+[    2.131664] 802.1Q VLAN Support v1.8
+[    2.135348] Registering the dns_resolver key type
+[    2.140829] usb 1-1: new high speed USB device number 2 using hiusb-ehci
+[    2.150441] registered taskstats version 1
+[    2.154815] platform rtc-hi3518: setting system clock to 1970-01-01 00:00:00 UTC (0)
+ø[    2.166875] Freeing init memory: 8384K
+[    2.217333] init: Console is alive
+[    3.230694] init: - preinit -
+/etc/preinit: line 49: hi_chip_info: not found
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    4.110095] mmc0: error -110 whilst initialising SD card
+[    6.814636] procd: - early -
+Failed to connect to ubus
+[    7.721854] procd: - ubus -
+[    8.742365] procd: - init -
+Please press Enter to activate this console.
+[   12.022973] loop: module loaded
+[   12.090635] usbcore: registered new interface driver usbserial
+[   12.097635] USB Serial support registered for generic
+[   12.110469] usbcore: registered new interface driver usbserial_generic
+[   12.117023] usbserial: USB Serial Driver core
+[   12.141715] USB Serial support registered for ch341-uart
+[   12.150611] usbcore: registered new interface driver ch341
+[   18.455519] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   19.761516] PHY: himii:01 - Link is Up - 10/Half
+[   19.766341] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+
+
+
+BusyBox v1.23.2 (2019-07-22 14:03:30 CEST) built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ CHAOS CALMER (Chaos Calmer, v15.05.1.101-39-g4fb306adb8)
+ -----------------------------------------------------
+  * 1 1/2 oz Gin            Shake with a glassful
+  * 1/4 oz Triple Sec       of broken ice and pour
+  * 3/4 oz Lime Juice       unstrained into a goblet.
+  * 1 1/2 oz Orange Juice
+  * 1 tsp. Grenadine Syrup
+ -----------------------------------------------------
+root@OpenIPC_HI35xx:/# lsusb
+Bus 001 Device 001: ID 1d6b:0002
+Bus 002 Device 001: ID 1d6b:0001
+Bus 001 Device 002: ID 0bda:8179
+root@OpenIPC_HI35xx:/# cat /proc/cpuinfo 
+Processor	: ARM926EJ-S rev 5 (v5l)
+BogoMIPS	: 218.72
+Features	: swp half fastmult edsp java 
+CPU implementer	: 0x41
+CPU architecture: 5TEJ
+CPU variant	: 0x0
+CPU part	: 0x926
+CPU revision	: 5
+
+Hardware	: hi3518
+Revision	: 0000
+Serial		: 0000000000000000
+root@OpenIPC_HI35xx:/# cat /proc/meminfo 
+MemTotal:          36200 kB
+MemFree:           17468 kB
+Buffers:               0 kB
+Cached:            10620 kB
+SwapCached:            0 kB
+Active:             3356 kB
+Inactive:           8080 kB
+Active(anon):        816 kB
+Inactive(anon):        0 kB
+Active(file):       2540 kB
+Inactive(file):     8080 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:           840 kB
+Mapped:              944 kB
+Shmem:                 0 kB
+Slab:               6088 kB
+SReclaimable:        788 kB
+SUnreclaim:         5300 kB
+KernelStack:         200 kB
+PageTables:          148 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:       18100 kB
+Committed_AS:       2288 kB
+VmallocTotal:     966656 kB
+VmallocUsed:         852 kB
+VmallocChunk:     965436 kB
+root@OpenIPC_HI35xx:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:00:23:34:45:66  
+          inet addr:192.168.1.10  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:31 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:1542 (1.5 KiB)
+          Interrupt:12 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:9 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:9 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:864 (864.0 B)  TX bytes:864 (864.0 B)
+
+root@OpenIPC_HI35xx:/# netstat -na
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      
+udp        0      0 192.168.1.10:50807      77.88.8.8:53            ESTABLISHED 
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node Path
+unix  5      [ ]         DGRAM                      1490 /dev/log
+unix  2      [ ACC ]     STREAM     LISTENING       1022 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      1656 
+unix  2      [ ]         DGRAM                      1597 
+unix  2      [ ]         DGRAM                      1574 
+unix  2      [ ]         DGRAM                      1570 
+unix  3      [ ]         STREAM     CONNECTED       1516 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       1515 
+unix  3      [ ]         STREAM     CONNECTED       1493 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       1492 
+unix  3      [ ]         STREAM     CONNECTED       1040 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       1039 
+root@OpenIPC_HI35xx:/# pstree
+procd-+-ash---pstree
+      |-dropbear
+      |-logd
+      |-netifd
+      |-ntpd
+      `-ubusd
+root@OpenIPC_HI35xx:/lib/modules/3.0.8# ls
+acodec.ko               hi3518_sio.ko           libcrc32c.ko
+ch341.ko                hi3518_sys.ko           loop.ko
+dm9601.ko               hi3518_tde.ko           mmz.ko
+gpioi2c.ko              hi3518_vda.ko           mtd_nandecctest.ko
+gpioi2c_ex.ko           hi3518_venc.ko          mtd_oobtest.ko
+hi3518_adec.ko          hi3518_viu.ko           mtd_pagetest.ko
+hi3518_aenc.ko          hi3518_vou.ko           mtd_readtest.ko
+hi3518_ai.ko            hi3518_vpss.ko          mtd_speedtest.ko
+hi3518_ao.ko            hi_i2c.ko               mtd_stresstest.ko
+hi3518_base.ko          hi_rtc.ko               mtd_subpagetest.ko
+hi3518_chnl.ko          hidmac.ko               mtd_torturetest.ko
+hi3518_dsu.ko           hifb.ko                 option.ko
+hi3518_group.ko         hiuser.ko               pwm.ko
+hi3518_h264e.ko         ip6_queue.ko            sil9024.ko
+hi3518_isp.ko           ip6table_raw.ko         ssp_ad9020.ko
+hi3518_ive.ko           lib80211.ko             ssp_pana.ko
+hi3518_jpege.ko         lib80211_crypt_ccmp.ko  ssp_sony.ko
+hi3518_rc.ko            lib80211_crypt_tkip.ko  tw2865.ko
+hi3518_region.ko        lib80211_crypt_wep.ko   usbserial.ko
