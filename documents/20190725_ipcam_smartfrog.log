@@ -1,0 +1,447 @@
+bootm 0x82000000
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   OpenIPC.org - Hisilicon Linux-3.
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    5196332 Bytes = 5 MiB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Linux version 3.0.8 (root@alladin-1000H) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 v15.05.1.101-25-gbb0ab9d537) ) #2 Thu Jul 25 00:03:32 CEST 2019
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] Machine: hi3518
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] AXI bus clock 200000000.
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 10160
+[    0.000000] Kernel command line: totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 40MB = 40MB total
+[    0.000000] Memory: 25136k/25136k available, 15824k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.000000]     vmalloc : 0xc3000000 - 0xfe000000   ( 944 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc2800000   (  40 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .init : 0xc0008000 - 0xc0aff000   (11228 kB)
+[    0.000000]       .text : 0xc0aff000 - 0xc0ed4000   (3924 kB)
+[    0.000000]       .data : 0xc0ed4000 - 0xc0ef44c0   ( 130 kB)
+[    0.000000]        .bss : 0xc0ef44e4 - 0xc0f0d508   ( 101 kB)
+[    0.000000] SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:128 nr_irqs:128 128
+[    0.000000] sched_clock: 32 bits at 100MHz, resolution 10ns, wraps every 42949ms
+[    0.000065] Calibrating delay loop... 218.72 BogoMIPS (lpj=1093632)
+[    0.070080] pid_max: default: 32768 minimum: 301
+[    0.070495] Mount-cache hash table entries: 512
+[    0.071689] CPU: Testing write buffer coherency: ok
+[    0.076527] NET: Registered protocol family 16
+[    0.091613] Serial: AMBA PL011 UART driver
+[    0.091946] uart:0: ttyAMA0 at MMIO 0x20080000 (irq = 5) is a PL011 rev2
+[    0.292488] console [ttyAMA0] enabled
+[    0.297199] uart:1: ttyAMA1 at MMIO 0x20090000 (irq = 5) is a PL011 rev2
+[    0.362621] bio: create slab <bio-0> at 0
+[    0.384493] SCSI subsystem initialized
+[    0.391911] usbcore: registered new interface driver usbfs
+[    0.398780] usbcore: registered new interface driver hub
+[    0.405227] usbcore: registered new device driver usb
+[    0.416472] Switching to clocksource timer1
+[    0.429732] NET: Registered protocol family 2
+[    0.434465] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.442243] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.449687] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.456307] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.462703] TCP reno registered
+[    0.465878] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.471866] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.478978] NET: Registered protocol family 1
+[    0.934286] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.942353] JFFS2 version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+[    0.951930] fuse init (API version 7.16)
+[    0.958885] msgmni has been set to 49
+[    0.967208] io scheduler noop registered
+[    0.971243] io scheduler deadline registered (default)
+[    0.976729] io scheduler cfq registered
+[    1.014976] brd: module loaded
+[    1.024479] Spi id table Version 1.22
+[    1.029835] Spi(cs1) ID: 0x01 0x20 0x18 0x4D 0x01 0x80
+[    1.226307] SPI FLASH start_up_mode is 3 Bytes
+[    1.230809] Spi(cs1): 
+[    1.233007] Block:64KB 
+[    1.235456] Chip:16MB 
+[    1.237814] Name:"S25FL129P1"
+[    1.241001] spi size: 16MB
+[    1.243712] chip num: 1
+[    1.246168] Creating 0 MTD partitions on "hi_sfc":
+[    1.255938] Fixed MDIO Bus: probed
+[    1.683752] himii: probed
+[    1.811014] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.817965] hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+[    1.823769] hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+[    1.831815] hiusb-ehci hiusb-ehci.0: irq 15, io mem 0x100b0000
+[    1.850128] hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+[    1.858558] hub 1-0:1.0: USB hub found
+[    1.862474] hub 1-0:1.0: 1 port detected
+[    1.868434] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.875749] hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+[    1.881591] hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 2
+[    1.889281] hiusb-ohci hiusb-ohci.0: irq 16, io mem 0x100a0000
+[    1.956477] hub 2-0:1.0: USB hub found
+[    1.960414] hub 2-0:1.0: 1 port detected
+[    1.967512] usbcore: registered new interface driver cdc_acm
+[    1.973274] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.982176] usbcore: registered new interface driver cdc_wdm
+[    1.987857] Initializing USB Mass Storage driver...
+[    1.993864] usbcore: registered new interface driver usb-storage
+[    1.999891] USB Mass Storage support registered.
+[    2.005397] usbcore: registered new interface driver ums-alauda
+[    2.012215] usbcore: registered new interface driver ums-datafab
+[    2.018973] usbcore: registered new interface driver ums-freecom
+[    2.025905] usbcore: registered new interface driver ums-isd200
+[    2.032734] usbcore: registered new interface driver ums-jumpshot
+[    2.039584] usbcore: registered new interface driver ums-sddr09
+[    2.046426] usbcore: registered new interface driver ums-sddr55
+[    2.053264] usbcore: registered new interface driver mdc800
+[    2.058857] mdc800: v0.7.5 (30/10/2000):USB Driver for Mustek MDC800 Digital Camera
+[    2.071167] using rtc device, rtc-hi3518, for alarms
+[    2.076051] platform rtc-hi3518: rtc core: registered rtc-hi3518 as rtc0
+[    2.090715] Netfilter messages via NETLINK v0.30.
+[    2.095578] nf_conntrack version 0.5.0 (392 buckets, 1568 max)
+[    2.103236] ctnetlink v0.93: registering with nfnetlink.
+[    2.109436] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.115356] TCP cubic registered
+[    2.118605] Initializing XFRM netlink socket
+[    2.141309] NET: Registered protocol family 10
+[    2.149943] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.155914] IPv6 over IPv4 tunneling driver
+[    2.162847] NET: Registered protocol family 17
+[    2.167723] Bridge firewalling registered
+[    2.171871] 802.1Q VLAN Support v1.8
+[    2.175551] lib80211: common routines for IEEE802.11 drivers
+[    2.181404] Registering the dns_resolver key type
+[    2.186829] usb 1-1: new high speed USB device number 2 using hiusb-ehci
+[    2.196331] registered taskstats version 1
+[    2.200785] platform rtc-hi3518: setting system clock to 1970-01-01 00:00:00 UTC (0)
+ø[    2.214040] Freeing init memory: 11228K
+[    2.264202] init: Console is alive
+[    3.280689] init: - preinit -
+/etc/preinit: line 49: hi_chip_info: not found
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    4.150095] mmc0: error -110 whilst initialising SD card
+[    6.864591] procd: - early -
+Failed to connect to ubus
+[    7.761865] procd: - ubus -
+[    8.787674] procd: - init -
+Please press Enter to activate this console.
+[   12.144303] loop: module loaded
+[   12.196193] usbcore: registered new interface driver dm9601
+[   12.251931] usbcore: registered new interface driver usbserial
+[   12.258914] USB Serial support registered for generic
+[   12.270553] usbcore: registered new interface driver usbserial_generic
+[   12.277107] usbserial: USB Serial Driver core
+[   12.310559] USB Serial support registered for ch341-uart
+[   12.317066] usbcore: registered new interface driver ch341
+
+[   19.530377] ADDRCONF(NETDEV_UP): eth0: link is not ready
+
+
+BusyBox v1.23.2 (2019-07-24 23:22:26 CEST) built-in shell (ash)
+
+
+ ___________  _____                                  
+|_   _| ___ \/  __ \                                 
+  | | | |_/ /| /  \/ __ _ _ __ ___    ___  _ __ __ _ 
+  | | |  __/ | |    / _` | '_ ` _ \  / _ \| '__/ _` |
+ _| |_| |    | \__/\ (_| | | | | | || (_) | | | (_| |
+ \___/\_|     \____/\__,_|_| |_| |_(_)___/|_|  \__, |
+                                                __/ |
+                                               |___/ 
+
+ ---------------------------------------------------
+ WARNING : Unauthorized access to this system is
+ forbidden and will be prosecuted by law.
+ By accessing this system, you agree that your
+ actions may be monitored if unauthorized usage
+ is suspected.
+ ---------------------------------------------------
+
+
+root@OpenIPC_HI35xx:/# [   20.801666] PHY: himii:01 - Link is Up - 10/Half
+[   20.806492] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+
+root@OpenIPC_HI35xx:/# ifconfig eth0 down
+root@OpenIPC_HI35xx:/# [   29.800105] ***link down status changed***.
+[   29.804325] PHY: himii:01 - Link is Down
+
+root@OpenIPC_HI35xx:/# lsmod
+ch341                   6654  0 
+dm9601                  5207  0 
+ip6_queue               3948  0 
+ip6table_raw             636  0 
+loop                   11422  0 
+usbserial              23864  1 ch341
+root@OpenIPC_HI35xx:/# cd /libroot@OpenIPC_HI35xx:/# 
+root@OpenIPC_HI35xx:/lib/modules/3.0.8# ls
+8188eu.ko               hi3518_sio.ko           mmz.ko
+acodec.ko               hi3518_sys.ko           mtd_nandecctest.ko
+ath.ko                  hi3518_tde.ko           mtd_oobtest.ko
+ch341.ko                hi3518_vda.ko           mtd_pagetest.ko
+dm9601.ko               hi3518_venc.ko          mtd_readtest.ko
+gpioi2c.ko              hi3518_viu.ko           mtd_speedtest.ko
+gpioi2c_ex.ko           hi3518_vou.ko           mtd_stresstest.ko
+hi3518_adec.ko          hi3518_vpss.ko          mtd_subpagetest.ko
+hi3518_aenc.ko          hi_i2c.ko               mtd_torturetest.ko
+hi3518_ai.ko            hi_rtc.ko               option.ko
+hi3518_ao.ko            hidmac.ko               pwm.ko
+hi3518_base.ko          hifb.ko                 rtl8187.ko
+hi3518_chnl.ko          hiuser.ko               rtl8xxxu.ko
+hi3518_dsu.ko           ip6_queue.ko            sil9024.ko
+hi3518_group.ko         ip6table_raw.ko         ssp_ad9020.ko
+hi3518_h264e.ko         lib80211.ko             ssp_pana.ko
+hi3518_isp.ko           lib80211_crypt_ccmp.ko  ssp_sony.ko
+hi3518_ive.ko           lib80211_crypt_tkip.ko  tw2865.ko
+hi3518_jpege.ko         lib80211_crypt_wep.ko   usbserial.ko
+hi3518_rc.ko            libcrc32c.ko
+hi3518_region.ko        loop.ko
+root@OpenIPC_HI35xx:/lib/modules/3.0.8# 
+
+root@OpenIPC_HI35xx:/# ls
+bin      etc      lib      overlay  rom      sbin     tmp      var
+dev      init     mnt      proc     root     sys      usr      www
+root@OpenIPC_HI35xx:/# insmod 8188eu.ko
+[   88.933922] 8188eu: module is from the staging directory, the quality is unknown, you have been warned.
+[   89.019176] Chip Version Info: CHIP_8188E_Normal_Chip_TSMC_D_CUT_1T1R_RomVer(0)
+[   89.063485] EEPROM ID = 0x8129
+[   89.083367] usbcore: registered new interface driver r8188eu
+root@OpenIPC_HI35xx:/# ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:2 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:192 (192.0 B)  TX bytes:192 (192.0 B)
+
+root@OpenIPC_HI35xx:/#  ifconfig wlan0 up
+[   97.697554] R8188EU: Firmware Version 11, SubVersion 1, Signature 0x88e1
+[   98.120738] MAC Address = 04:5c:06:11:4d:89
+[   98.131080] ADDRCONF(NETDEV_UP): wlan0: link is not ready
+root@OpenIPC_HI35xx:/# ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:2 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:192 (192.0 B)  TX bytes:192 (192.0 B)
+
+wlan0     Link encap:Ethernet  HWaddr 04:5C:06:11:4D:89  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+root@OpenIPC_HI35xx:/# iwlist wlan0 scannigng
+wlan0     Scan completed :
+          Cell 01 - Address: 84:16:F9:E8:BB:3C
+                    ESSID:"Video2G"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.422 GHz (Channel 3)
+                    Encryption key:on
+                    Bit Rates:144 Mb/s
+                    Extra:wpa_ie =dd160050f20101000050f20401000050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie =30140100000fac040100000fac040100000fac020c00
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality:0  Signal level:0  Noise level:0
+          
+
+root@OpenIPC_HI35xx:/# cd /etcroot@OpenIPC_HI35xx:/# cd /etc/
+root@OpenIPC_HI35xx:/etc# ls
+TZ                    hotplug.d             protocols
+banner                hotplug.json          rc.button
+banner.failsafe       init.d                rc.common
+chatscripts           inittab               rc.d
+config                modules-boot.d        rc.local
+crontabs              modules.d             resolv.conf
+device_info           mtab                  sensors
+diag.sh               openwrt_release       services
+dropbear              openwrt_version       shadow
+fstab                 opkg                  shells
+fw_env.config         opkg.conf             sysctl.conf
+gcom                  passwd                sysupgrade.conf
+group                 ppp                   uci-defaults
+hosts                 preinit               usb-mode.json
+hotplug-preinit.json  profile
+root@OpenIPC_HI35xx:/etc# vi wpa_supplicant.conf
+root@OpenIPC_HI35xx:/etc# wpa_supplicant -Dwext -iwlan0 -c /etc/wpa_supplicant.conf &
+
+root@OpenIPC_HI35xx:/etc# Successfully initialized wpa_supplicant
+ioctl[SIOCSIWAP]: Operation not permitted
+[  253.416773] R8188EU: INFO indicate disassoc
+wlan0: Trying to associate with 84:16:f9:e8:bb:3c (SSID='Video2G' freq=2422 MHz)
+[  253.545027] R8188EU: INFO assoc success
+[  253.549474] ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+wlan0: Associated with 84:16:f9:e8:bb:3c
+wlan0: WPA: Key negotiation completed with 84:16:f9:e8:bb:3c [PTK=CCMP GTK=CCMP]
+wlan0: CTRL-EVENT-CONNECTED - Connection to 84:16:f9:e8:bb:3c completed [id=0 id_str=]
+
+root@OpenIPC_HI35xx:/etc# ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:2 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:192 (192.0 B)  TX bytes:192 (192.0 B)
+
+wlan0     Link encap:Ethernet  HWaddr 04:5C:06:11:4D:89  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:554 (554.0 B)  TX bytes:800 (800.0 B)
+
+root@OpenIPC_HI35xx:/etc# iwconfig wlan0
+
+wlan0     IEEE 802.11bgn  ESSID:"Video2G"  
+          Mode:Managed  Frequency:2.422 GHz  Access Point: 84:16:F9:E8:BB:3C   
+          Bit Rate:72.2 Mb/s   
+          RTS thr:off   Fragment thr:off
+          Encryption key:****-****-****-****-****-****-****-****   Security mode:open
+          Power Management:off
+          Link Quality=0/100  Signal level=-82 dBm  Noise level=0 dBm
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+
+
+root@OpenIPC_HI35xx:/etc/config# pstree
+procd-+-ash-+-pstree
+      |     `-wpa_supplicant
+      |-dropbear
+      |-logd
+      |-netifd
+      |-ntpd
+      |-odhcpd
+      `-ubusd
+
+root@OpenIPC_HI35xx: # hisi-load.sh 
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+remove audio
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+module is not loaded
+[  396.581846] Hisilicon Media Memory Zone Manager
+[  396.606839] hi3518_base: module license 'Proprietary' taints kernel.
+[  396.613333] Disabling lock debugging due to kernel taint
+[  396.623905] Hisilicon UMAP device driver interface: v3.00
+[  396.659116] pa:84000000, va:c32c0000
+[  396.662840] load sys.ko ...OK!
+[  396.788753] load viu.ko ...OK!
+[  396.814839] ISP Mod init!
+[  396.856139] load vpss.ko ....OK!
+[  396.920192] load vou.ko ....OK!
+[  396.994114] load venc.ko ...OK!
+[  397.025342] load group.ko ...OK!
+[  397.051446] load chnl.ko ...OK!
+[  397.089366] load h264e.ko ...OK!
+[  397.117980] load jpege.ko ...OK!
+[  397.163696] load rc.ko ...OK!
+[  397.192439] load region.ko ....OK!
+[  397.224947] load vda.ko ....OK!
+Failed to find gpio. Maybe it is a built in module ?
+Failed to find ap1511. Maybe it is a built in module ?
+[  397.304736] hi_i2c init is ok!
+Failed to find wdt. Maybe it is a built in module ?
+[  397.377075] Kernel: ssp initial ok!
+[  397.402970] acodec inited!
+insert audio
+==== Your input Sensor type is ov9712 ====
+
+root@OpenIPC_HI35xx:/usr/bin# lsmod
+8188eu                680938  0 
+acodec                 10081  0 
+ch341                   6654  0 
+dm9601                  5207  0 
+hi3518_adec            16233  0 
+hi3518_aenc            52339  0 
+hi3518_ai              50543  0 
+hi3518_ao              43394  0 
+hi3518_base            42158 22 hi3518_adec
+hi3518_chnl            37690  0 
+hi3518_dsu            127578  0 
+hi3518_group          177177  0 
+hi3518_h264e          157913  0 
+hi3518_isp             20719  2 ssp_ad9020
+hi3518_ive             30708  0 
+hi3518_jpege           44577  0 
+hi3518_rc             147903  0 
+hi3518_region          49441  0 
+hi3518_sio             11483  2 hi3518_ao
+hi3518_sys             36972  1 hi3518_viu
+hi3518_tde            110767  2 hifb
+hi3518_vda            168451  0 
+hi3518_venc            89900  2 hi3518_jpege
+hi3518_viu            171685  0 
+hi3518_vou            251128  1 hifb
+hi3518_vpss           203371  0 
+hi_i2c                  3518  0 
+hidmac                 12847  2 hi3518_ao
+hifb                   61239  0 
+hiuser                   807  2 hi3518_jpege
+ip6_queue               3948  0 
+ip6table_raw             636  0 
+loop                   11422  0 
+mmz                    18129  5 hi3518_aenc
+pwm                     1319  0 
+ssp_ad9020              4187  0 
+usbserial              23864  1 ch341
+
+
+root@OpenIPC_HI35xx:/usr/bin# ping www.google.de
+PING www.google.de (172.217.16.67): 56 data bytes
+64 bytes from 172.217.16.67: seq=0 ttl=55 time=1038.499 ms
+64 bytes from 172.217.16.67: seq=1 ttl=55 time=18.987 ms
+64 bytes from 172.217.16.67: seq=2 ttl=55 time=20.319 ms
+^C
