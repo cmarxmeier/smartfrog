@@ -17,7 +17,7 @@
 #
 # U-Boot: 2010.06 (Jun 17 2015 - 13:04:57)
 #
-# SDK: Hi3518_SDK_V1.0.7.0
+# SDK: Hi3518_SDK_V1.0.A.0
 #
 # toolchain: arm-hisiv100nptl-linux
 # sensor: ov9712
