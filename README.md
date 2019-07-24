@@ -18,6 +18,9 @@
 # U-Boot: 2010.06 (Jun 17 2015 - 13:04:57)
 #
 # SDK: Hi3518_SDK_V1.0.A.0
-#
 # toolchain: arm-hisiv100nptl-linux
+#
+# OpenIpc.org chaos_calmer
+# target: Hi3518cv100
+#
 # sensor: ov9712
