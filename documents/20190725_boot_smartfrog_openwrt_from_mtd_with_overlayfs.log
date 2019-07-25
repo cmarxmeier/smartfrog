@@ -1,0 +1,210 @@
+reset
+resetting ...
+
+
+U-Boot 2010.06 (Jun 17 2015 - 13:04:57)
+
+Check spi flash controller v350... Found
+Spi(cs1) ID: 0x01 0x20 0x18 0x4D 0x01 0x80
+Spi(cs1): Block:64KB Chip:16MB Name:"S25FL129P1"
+MMC:   MID:0x3 RBlock:512 WBlock:512 Chip:31166976KB Name:"SL32G"
+SD:   Ver:2.0 High Capacity Speed:25000000Hz Bus Width:4bit
+In:    serial
+Out:   serial
+Err:   serial
+Hit any key to stop autoboot:  1  0 
+16384 KiB hi_sfc at 0:0 is now current device
+
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   OpenIPC.org - Hisilicon Linux-3.
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1641828 Bytes = 1.6 MiB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Linux version 3.0.8 (root@alladin-1000H) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 v15.05.1.101-25-gbb0ab9d537) ) #1 Thu Jul 25 00:01:39 CEST 2019
+[    0.000000] CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] Machine: hi3518
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] AXI bus clock 200000000.
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 10160
+[    0.000000] Kernel command line: totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),2M(kernel),5M(rootfs),-(rootfs_data)
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 40MB = 40MB total
+[    0.000000] Memory: 36232k/36232k available, 4728k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.000000]     vmalloc : 0xc3000000 - 0xfe000000   ( 944 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc2800000   (  40 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .init : 0xc0008000 - 0xc0029000   ( 132 kB)
+[    0.000000]       .text : 0xc0029000 - 0xc03fe000   (3924 kB)
+[    0.000000]       .data : 0xc03fe000 - 0xc041e4c0   ( 130 kB)
+[    0.000000]        .bss : 0xc041e4e4 - 0xc0437508   ( 101 kB)
+[    0.000000] SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:128 nr_irqs:128 128
+[    0.000000] sched_clock: 32 bits at 100MHz, resolution 10ns, wraps every 42949ms
+[    0.000065] Calibrating delay loop... 218.72 BogoMIPS (lpj=1093632)
+[    0.070078] pid_max: default: 32768 minimum: 301
+[    0.070501] Mount-cache hash table entries: 512
+[    0.071698] CPU: Testing write buffer coherency: ok
+[    0.076554] NET: Registered protocol family 16
+[    0.091643] Serial: AMBA PL011 UART driver
+[    0.091977] uart:0: ttyAMA0 at MMIO 0x20080000 (irq = 5) is a PL011 rev2
+[    0.302659] console [ttyAMA0] enabled
+[    0.307362] uart:1: ttyAMA1 at MMIO 0x20090000 (irq = 5) is a PL011 rev2
+[    0.372758] bio: create slab <bio-0> at 0
+[    0.394634] SCSI subsystem initialized
+[    0.402060] usbcore: registered new interface driver usbfs
+[    0.408925] usbcore: registered new interface driver hub
+[    0.415378] usbcore: registered new device driver usb
+[    0.426612] Switching to clocksource timer1
+[    0.439887] NET: Registered protocol family 2
+[    0.444624] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.452408] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.459853] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.466467] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.472863] TCP reno registered
+[    0.476039] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.482023] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.489139] NET: Registered protocol family 1
+[    0.543676] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.551731] JFFS2 version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+[    0.561260] fuse init (API version 7.16)
+[    0.568207] msgmni has been set to 70
+[    0.576501] io scheduler noop registered
+[    0.580535] io scheduler deadline registered (default)
+[    0.586013] io scheduler cfq registered
+[    0.624005] brd: module loaded
+[    0.633564] Spi id table Version 1.22
+[    0.638901] Spi(cs1) ID: 0x01 0x20 0x18 0x4D 0x01 0x80
+[    0.837373] SPI FLASH start_up_mode is 3 Bytes
+[    0.841877] Spi(cs1): 
+[    0.844072] Block:64KB 
+[    0.846520] Chip:16MB 
+[    0.848879] Name:"S25FL129P1"
+[    0.852069] spi size: 16MB
+[    0.854779] chip num: 1
+[    0.857268] 5 cmdlinepart partitions found on MTD device hi_sfc
+[    0.863236] Creating 5 MTD partitions on "hi_sfc":
+[    0.868051] 0x000000000000-0x000000080000 : "boot"
+[    0.877078] 0x000000080000-0x000000090000 : "env"
+[    0.886106] 0x000000090000-0x000000290000 : "kernel"
+[    0.895418] 0x000000290000-0x000000790000 : "rootfs"
+[    0.904867] 0x000000790000-0x000001000000 : "rootfs_data"
+[    0.932565] Fixed MDIO Bus: probed
+[    1.353397] himii: probed
+[    1.480853] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.487802] hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+[    1.493603] hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+[    1.501650] hiusb-ehci hiusb-ehci.0: irq 15, io mem 0x100b0000
+[    1.520125] hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+[    1.528474] hub 1-0:1.0: USB hub found
+[    1.532393] hub 1-0:1.0: 1 port detected
+[    1.538325] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.545645] hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+[    1.551464] hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 2
+[    1.559151] hiusb-ohci hiusb-ohci.0: irq 16, io mem 0x100a0000
+[    1.626505] hub 2-0:1.0: USB hub found
+[    1.630441] hub 2-0:1.0: 1 port detected
+[    1.637547] usbcore: registered new interface driver cdc_acm
+[    1.643309] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.652211] usbcore: registered new interface driver cdc_wdm
+[    1.657895] Initializing USB Mass Storage driver...
+[    1.663880] usbcore: registered new interface driver usb-storage
+[    1.669907] USB Mass Storage support registered.
+[    1.675419] usbcore: registered new interface driver ums-alauda
+[    1.682247] usbcore: registered new interface driver ums-datafab
+[    1.689036] usbcore: registered new interface driver ums-freecom
+[    1.695957] usbcore: registered new interface driver ums-isd200
+[    1.702792] usbcore: registered new interface driver ums-jumpshot
+[    1.709650] usbcore: registered new interface driver ums-sddr09
+[    1.716499] usbcore: registered new interface driver ums-sddr55
+[    1.723343] usbcore: registered new interface driver mdc800
+[    1.728937] mdc800: v0.7.5 (30/10/2000):USB Driver for Mustek MDC800 Digital Camera
+[    1.741263] using rtc device, rtc-hi3518, for alarms
+[    1.746149] platform rtc-hi3518: rtc core: registered rtc-hi3518 as rtc0
+[    1.760951] Netfilter messages via NETLINK v0.30.
+[    1.765818] nf_conntrack version 0.5.0 (566 buckets, 2264 max)
+[    1.773531] ctnetlink v0.93: registering with nfnetlink.
+[    1.779721] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.785670] TCP cubic registered
+[    1.788920] Initializing XFRM netlink socket
+[    1.811764] NET: Registered protocol family 10
+[    1.820542] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    1.826383] IPv6 over IPv4 tunneling driver
+[    1.833280] NET: Registered protocol family 17
+[    1.838144] Bridge firewalling registered
+[    1.842291] 802.1Q VLAN Support v1.8
+[    1.845969] lib80211: common routines for IEEE802.11 drivers
+[    1.851822] Registering the dns_resolver key type
+[    1.857239] usb 1-1: new high speed USB device number 2 using hiusb-ehci
+[    1.866689] registered taskstats version 1
+[    1.871141] platform rtc-hi3518: setting system clock to 1970-01-01 00:00:00 UTC (0)
+ø[    1.886578] VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+[    1.893921] Freeing init memory: 132K
+[    2.869939] init: Console is alive
+[    4.930706] init: - preinit -
+/etc/preinit: line 49: hi_chip_info: not found
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    7.110097] mmc0: error -110 whilst initialising SD card
+[    9.866774] mount_root: switching to jffs2 overlay
+[    9.917206] procd: - early -
+[   11.513383] procd: - ubus -
+Command failed: Not found
+[   12.573018] procd: - init -
+Please press Enter to activate this console.
+[   16.406193] loop: module loaded
+[   16.461777] usbcore: registered new interface driver dm9601
+[   16.511836] usbcore: registered new interface driver usbserial
+[   16.518835] USB Serial support registered for generic
+[   16.530560] usbcore: registered new interface driver usbserial_generic
+[   16.537113] usbserial: USB Serial Driver core
+[   16.564252] USB Serial support registered for ch341-uart
+[   16.580592] usbcore: registered new interface driver ch341
+[   18.275537] overlayfs: ERROR - failed to whiteout '01_leds'
+[   18.320885] overlayfs: ERROR - failed to whiteout '02_network'
+[   18.404257] overlayfs: ERROR - failed to whiteout '10_migrate-shadow'
+[   18.466552] overlayfs: ERROR - failed to whiteout '11_migrate-sysctl'
+[   18.530737] overlayfs: ERROR - failed to whiteout '12_network-generate-ula'
+[   18.593647] overlayfs: ERROR - failed to whiteout '20_migrate-feeds'
+[   18.656918] overlayfs: ERROR - failed to whiteout 'odhcpd.defaults'
+[   25.509620] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   26.571586] PHY: himii:01 - Link is Up - 10/Half
+[   26.576409] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+
+
+
+BusyBox v1.23.2 (2019-07-24 23:22:26 CEST) built-in shell (ash)
+
+
+ ___________  _____                                  
+|_   _| ___ \/  __ \                                 
+  | | | |_/ /| /  \/ __ _ _ __ ___    ___  _ __ __ _ 
+  | | |  __/ | |    / _` | '_ ` _ \  / _ \| '__/ _` |
+ _| |_| |    | \__/\ (_| | | | | | || (_) | | | (_| |
+ \___/\_|     \____/\__,_|_| |_| |_(_)___/|_|  \__, |
+                                                __/ |
+                                               |___/ 
+
+ ---------------------------------------------------
+ WARNING : Unauthorized access to this system is
+ forbidden and will be prosecuted by law.
+ By accessing this system, you agree that your
+ actions may be monitored if unauthorized usage
+ is suspected.
+ ---------------------------------------------------
+
+
+root@OpenIPC_HI35xx:/# 
