@@ -1,0 +1,106 @@
+hi3518 smartfrog mtd parts old/new
+
+#bootargs totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),2048k(kernel),5120k(rootfs),-(overlay)
+#smartfrog:
+#original: mem=64M console=ttyAMA0,115200 root=1f01 rootfstype=cramfs mtdparts=hi_sfc:512K(boot),5M(rootfs),9M(app),1536K(config)
+
+# Set kernel param's
+setenv 'bootargs totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),2M(kernel),5M(rootfs),-(rootfs_data)'
+# Set boot command
+#openipc.org suggestion:
+# setenv 'bootcmd sf probe 0; sf read 0x80000000 0x80000 0x200000; bootm 0x80000000'
+#setenv 'bootcmd sf probe 0; sf read 0x84000000 0x80000 0x200000; bootm 0x82000000'
+
+setenv 'bootcmd sf probe 0;sf read 0x82000000 0x90000 0x200000;bootm 0x82000000'
+#stock fw:
+# setenv 'bootcmd=sf probe 0;sf read 0x84000000 0x50000 0x200000;cramfsload;bootm 0x820000
+#Save settings
+# saveenv
+# Prepare flash
+sf probe 0
+# Unlock flash
+sf lock 0
+
+
+# Download kernel via console to RAM
+loady 0x82000000 
+->ymodem upload openwrt-hisilicon-armv5tej-3.0.8-uImage
+## Ready for binary (ymodem) download to 0x82000000 at 115200 bps...
+#Cmode, 12830(SOH)/0(STX)/0(CAN) packets, 4 retries
+## Total Size      = 0x00190da4 = 1641892 Bytes
+# erase env - if needed
+# sf erase 0x80000 0x10000
+# Erase part of FLASH
+# 512K+64k Offset instead of 256K
+sf erase 0x90000 0x200000
+# Write kernel
+sf write 0x82000000 0x90000 0x00190da4
+# Download rootfs via console to RAM 
+loady 0x82000000
+->ymodem upload openwrt-hisilicon-armv5tej-3.0.8-root.squashfs
+## Ready for binary (ymodem) download to 0x82000000 at 115200 bps...
+#C910(SOH)/0(STX)/0(CAN) packets, 5 retries
+## Total Size      = 0x003a69de = 3828190 Bytes
+
+# Erase part of FLASH
+# offset for 512K Boot instead of 256K
+sf erase 0x290000 0x500000
+# Write rootfs to FLASH
+# also here - 512K offset instead of 256K
+sf write 0x82000000 0x290000 0x003a69de
+# Restart
+reset
+
+
+after boot:
+flash_eraseall -j /dev/mtd4 # formatting overlayfs
+
+
+
+part-table-new:
+4 cmdlinepart partitions found on MTD device hi_sfc
+Creating 4 MTD partitions on "hi_sfc":
+0x000000000000-0x000000080000 : "boot" # 512K 
+0x0x0000080000-0x000000090000 :	"env" #64 K
+0x000000090000-0x000000290000 : "kernel" #2MB
+0x000000290000-0x000000790000 : "rootfs" # 5MB
+0x000000790000-				  : "overlay"
+
+mtd orig:
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00080000 00010000 "boot"
+mtd1: 00500000 00010000 "rootfs"
+mtd2: 00900000 00010000 "app"
+mtd3: 00180000 00010000 "config"
+
+
+
+orig smartfrog:
+4 cmdlinepart partitions found on MTD device hi_sfc
+Creating 4 MTD partitions on "hi_sfc":
+0x000000000000-0x000000080000 : "boot"
+0x000000080000-0x000000580000 : "rootfs"
+0x000000580000-0x000000e80000 : "app"
+0x000000e80000-0x000001000000 : "config"
+
+
+printenv: 
+bootargs=mem=64M console=ttyAMA0,115200 root=1f01 rootfstype=cramfs mtdparts=hi)
+bootcmd=sf probe 0;sf read 0x84000000 0x80000 0x500000;cramfsload;bootm 0x820000
+bootdelay=1
+baudrate=115200
+ethaddr=00:00:23:34:45:66
+ipaddr=172.18.16.190
+serverip=172.18.16.16
+netmask=255.255.255.0
+bootfile="/boot/hikernel"
+cramfsaddr=0x84000000
+cramfsldaddr=0x82000000
+stdin=serial
+stdout=serial
+stderr=serial
+verify=n
+ver=U-Boot 2010.06 (Jun 17 2015 - 13:04:57)
+
+Environment size: 496/65532 bytes
