@@ -1,19 +1,12 @@
 hi3518 smartfrog mtd parts old/new
 
-#bootargs totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),2048k(kernel),5120k(rootfs),-(overlay)
-#smartfrog:
-#original: mem=64M console=ttyAMA0,115200 root=1f01 rootfstype=cramfs mtdparts=hi_sfc:512K(boot),5M(rootfs),9M(app),1536K(config)
+
+
 
 # Set kernel param's
 setenv 'bootargs totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),2M(kernel),5M(rootfs),-(rootfs_data)'
 # Set boot command
-#openipc.org suggestion:
-# setenv 'bootcmd sf probe 0; sf read 0x80000000 0x80000 0x200000; bootm 0x80000000'
-#setenv 'bootcmd sf probe 0; sf read 0x84000000 0x80000 0x200000; bootm 0x82000000'
-
 setenv 'bootcmd sf probe 0;sf read 0x82000000 0x90000 0x200000;bootm 0x82000000'
-#stock fw:
-# setenv 'bootcmd=sf probe 0;sf read 0x84000000 0x50000 0x200000;cramfsload;bootm 0x820000
 #Save settings
 saveenv
 #hisilicon # saveenv
@@ -28,7 +21,7 @@ sf lock 0
 
 # Download kernel via console to RAM
 loady 0x82000000 
-->ymodem upload openwrt-hisilicon-armv5tej-3.0.8-uImage
+# in minicom start ymodem upload of openwrt-hisilicon-armv5tej-3.0.8-uImage with CTRL-A Z S
 ## Ready for binary (ymodem) download to 0x82000000 at 115200 bps...
 #Cmode, 12830(SOH)/0(STX)/0(CAN) packets, 4 retries
 ## Total Size      = 0x00190da4 = 1641892 Bytes
@@ -38,10 +31,10 @@ loady 0x82000000
 # 512K+64k Offset instead of 256K
 sf erase 0x90000 0x200000
 # Write kernel
-sf write 0x82000000 0x90000 0x00190da4
+sf write 0x82000000 0x90000 0x00190da4 # last param=filesize of upload in hex
 # Download rootfs via console to RAM 
 loady 0x82000000
-->ymodem upload openwrt-hisilicon-armv5tej-3.0.8-root.squashfs
+# in minicom start ymodem upload of openwrt-hisilicon-armv5tej-3.0.8-root.squashfs with CTRL-A Z S
 ## Ready for binary (ymodem) download to 0x82000000 at 115200 bps...
 #C910(SOH)/0(STX)/0(CAN) packets, 5 retries
 ## Total Size      = 0x003a69de = 3828190 Bytes
@@ -51,11 +44,11 @@ loady 0x82000000
 sf erase 0x290000 0x500000
 # Write rootfs to FLASH
 # also here - 512K offset instead of 256K
-sf write 0x82000000 0x290000 0x003a69de
-# save copy of env to new partition
-sf erase 0x80000 0x10000
-sf read 0x82000000 0x60000 0x10000
-sf write 0x82000000 0x80000 0x10000
+sf write 0x82000000 0x290000 0x003a69de # last param=filesize of upload in hex
+# backup copy of env to new partition
+#sf erase 0x80000 0x10000
+#sf read 0x82000000 0x60000 0x10000
+#sf write 0x82000000 0x80000 0x10000
 
 # Restart
 reset
