@@ -15,7 +15,11 @@ setenv 'bootcmd sf probe 0;sf read 0x82000000 0x90000 0x200000;bootm 0x82000000'
 #stock fw:
 # setenv 'bootcmd=sf probe 0;sf read 0x84000000 0x50000 0x200000;cramfsload;bootm 0x820000
 #Save settings
-# saveenv
+saveenv
+#hisilicon # saveenv
+#Saving Environment to SPI Flash...
+#Erasing SPI flash, offset 0x00060000 size 64K ...done
+#Writing to SPI flash, offset 0x00060000 size 64K ...done
 # Prepare flash
 sf probe 0
 # Unlock flash
@@ -48,6 +52,11 @@ sf erase 0x290000 0x500000
 # Write rootfs to FLASH
 # also here - 512K offset instead of 256K
 sf write 0x82000000 0x290000 0x003a69de
+# save copy of env to new partition
+sf erase 0x80000 0x10000
+sf read 0x82000000 0x60000 0x10000
+sf write 0x82000000 0x80000 0x10000
+
 # Restart
 reset
 
