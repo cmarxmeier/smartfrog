@@ -49,7 +49,8 @@ sf write 0x82000000 0x290000 0x003a69de # last param=filesize of upload in hex
 #sf erase 0x80000 0x10000
 #sf read 0x82000000 0x60000 0x10000
 #sf write 0x82000000 0x80000 0x10000
-
+# erase rootfs_data part
+sf erase 0x000000790000 0x870000
 # Restart
 reset
 
