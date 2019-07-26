@@ -101,7 +101,7 @@ Creating 4 MTD partitions on "hi_sfc":
 0x000000e80000-0x000001000000 : "config"
 
 
-printenv: 
+orig printenv: 
 bootargs=mem=64M console=ttyAMA0,115200 root=1f01 rootfstype=cramfs mtdparts=hi)
 bootcmd=sf probe 0;sf read 0x84000000 0x80000 0x500000;cramfsload;bootm 0x820000
 bootdelay=1
