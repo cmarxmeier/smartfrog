@@ -73,13 +73,13 @@ Creating 4 MTD partitions on "hi_sfc":
 0x000000890000-				  : "overlay"
 
 bootlog:
-  0.893287] 5 cmdlinepart partitions found on MTD device hi_sfc
-[    0.899214] Creating 5 MTD partitions on "hi_sfc":
-[    0.904068] 0x000000000000-0x000000080000 : "boot"
-[    0.913187] 0x000000080000-0x000000090000 : "env"
-[    0.922259] 0x000000090000-0x000000290000 : "kernel"
-[    0.931663] 0x000000290000-0x000000790000 : "rootfs"
-[    0.941098] 0x000000790000-0x000001000000 : "rootfs_data"
+[    1.054862] 5 cmdlinepart partitions found on MTD device hi_sfc
+[    1.060832] Creating 5 MTD partitions on "hi_sfc":
+[    1.065651] 0x000000000000-0x000000080000 : "boot"
+[    1.074769] 0x000000080000-0x000000090000 : "env"
+[    1.083910] 0x000000090000-0x000000390000 : "kernel"
+[    1.093391] 0x000000390000-0x000000890000 : "rootfs"
+[    1.102893] 0x000000890000-0x000001000000 : "rootfs_data"
 
 
 mtd orig:
