@@ -4,9 +4,9 @@ hi3518 smartfrog mtd parts old/new
 do not use minicom in screen-Session - you'll need CTRL-Z for minicom commands :D
 
 # Set kernel param's
-setenv 'bootargs totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),2M(kernel),5M(rootfs),-(rootfs_data)'
+setenv 'bootargs totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),3M(kernel),5M(rootfs),-(rootfs_data)'
 # Set boot command
-setenv 'bootcmd sf probe 0;sf read 0x82000000 0x90000 0x200000;bootm 0x82000000'
+setenv 'bootcmd sf probe 0;sf read 0x82000000 0x90000 0x300000;bootm 0x82000000'
 #Save settings
 saveenv
 #hisilicon # saveenv
@@ -32,7 +32,7 @@ loady 0x82000000
 # sf erase 0x80000 0x10000
 # Erase part of FLASH
 # 512K+64k Offset instead of 256K
-sf erase 0x90000 0x200000
+sf erase 0x90000 0x300000
 # Write kernel
 sf write 0x82000000 0x90000 0x00190da4 # last param=filesize of upload in hex
 # Download rootfs via console to RAM 
@@ -44,16 +44,16 @@ loady 0x82000000
 
 # Erase part of FLASH
 # offset for 512K Boot instead of 256K
-sf erase 0x290000 0x500000
+sf erase 0x390000 0x500000
 # Write rootfs to FLASH
 # also here - 512K offset instead of 256K
-sf write 0x82000000 0x290000 0x003a69de # last param=filesize of upload in hex
+sf write 0x82000000 0x390000 0x003a69de # last param=filesize of upload in hex
 # backup copy of env to new partition
 #sf erase 0x80000 0x10000
 #sf read 0x82000000 0x60000 0x10000
 #sf write 0x82000000 0x80000 0x10000
 # erase rootfs_data part
-sf erase 0x000000790000 0x870000
+sf erase 0x000000890000 0x870000
 # Restart
 reset
 
@@ -68,9 +68,9 @@ part-table-new:
 Creating 4 MTD partitions on "hi_sfc":
 0x000000000000-0x000000080000 : "boot" # 512K 
 0x0x0000080000-0x000000090000 :	"env" #64 K
-0x000000090000-0x000000290000 : "kernel" #2MB
-0x000000290000-0x000000790000 : "rootfs" # 5MB
-0x000000790000-				  : "overlay"
+0x000000090000-0x000000390000 : "kernel" #3MB
+0x000000390000-0x000000890000 : "rootfs" # 5MB
+0x000000890000-				  : "overlay"
 
 bootlog:
   0.893287] 5 cmdlinepart partitions found on MTD device hi_sfc
