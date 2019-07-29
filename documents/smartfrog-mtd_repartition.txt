@@ -1,7 +1,7 @@
 hi3518 smartfrog mtd parts old/new
 
 
-
+do not use minicom in screen-Session - you'll need CTRL-Z for minicom commands :D
 
 # Set kernel param's
 setenv 'bootargs totalmem=64M mem=40M sensor=ov9712 console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs,jffs2 mtdparts=hi_sfc:512K(boot),64k(env),2M(kernel),5M(rootfs),-(rootfs_data)'
